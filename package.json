@@ -1,5 +1,5 @@
 {
-  "name": "teamprofilegenerator",
+  "name": "tpg",
   "version": "1.0.0",
   "description": "",
   "main": "scipt.js",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pgwdbri/TeamProfileGenerator/issues"
   },
-  "homepage": "https://github.com/pgwdbri/TeamProfileGenerator#readme"
+  "homepage": "https://github.com/pgwdbri/TeamProfileGenerator#readme",
+  "dependencies": {
+    "merge-descriptors": "^1.0.1"
+  }
 }
