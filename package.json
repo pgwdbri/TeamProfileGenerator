@@ -1,22 +1,14 @@
 {
-  "name": "tpg",
+  "name": "mini-project",
   "version": "1.0.0",
   "description": "",
-  "main": "scipt.js",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pgwdbri/TeamProfileGenerator.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pgwdbri/TeamProfileGenerator/issues"
-  },
-  "homepage": "https://github.com/pgwdbri/TeamProfileGenerator#readme",
   "dependencies": {
-    "merge-descriptors": "^1.0.1"
+    "inquirer": "^6.3.1"
   }
 }
