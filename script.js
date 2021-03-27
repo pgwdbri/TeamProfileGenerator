@@ -10,19 +10,50 @@ const generateHTML = (answers) =>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
+  <title>Team Members</title>
 </head>
+
 <body>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <p class="lead">I am from ${answers.location}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-    <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+  <div class="container-fluid">
+    <div class="row">
+      <div class = "col-12 team-heading">
+        <h1 class = "text-center"> Team Members </h1>
+      </div>
+    </div>
+  </div>
+  
+  <div class = "container">
+    <div class = "row">
+      <div class = "team-area col-12 justufy-content-center">
+        <div class = "card employee-card">
+
+  <div class = "card-header">
+    <h2 class= "card-title"> Name:${answers.name} </h2>
+  </div>
+
+  <div class = "card-body">
+    <ul class = "list-group">
+      <li class = "list-group-item"> ID: ${answers.id} </li>
+      <li class = "list-group-item"> Email: ${answers.email} </li>
+      <li class = "list-group-item"> Office Number: ${answers.office} </li>
     </ul>
   </div>
+
+  <div class = "card-header">
+    <h2 class= "card-title"> Name:${answers.intern} </h2>
+  </div>
+
+  <div class = "card-body">
+    <ul class = "list-group">
+      <li class = "list-group-item"> ID: ${answers.internId} </li>
+      <li class = "list-group-item"> Email: ${answers.emailI} </li>
+      <li class="list-group-item">GitHub: ${answers.githubI}</li>
+    </ul>
+  </div>
+
+
+
+
 </div>
 </body>
 </html>`;
@@ -32,33 +63,66 @@ inquirer
     {
       type: 'input',
       name: 'name',
-      message: 'What is your name?',
+      message: 'Who is the Manager?',
     },
     {
       type: 'input',
-      name: 'location',
-      message: 'Where are you from?',
+      name: 'id',
+      message: 'ID number of Manager?',
     },
     {
       type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
+      name: 'email',
+      message: 'Manager Email?',
     },
+
     {
       type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+      name: 'office',
+      message: 'Manager office number?',
     },
+
+    {
+      type: 'list',
+      message: 'Woul you like to add a team member?',
+      name: 'addMember',
+      choices: ['Yes', 'No'],
+    },
+
+    {
+      type: 'list',
+      message: 'Is this member an Intern or an Engineer?',
+      name: 'addMemberType',
+      choices: ['Intern', 'Engineer'],
+    },
+
     {
       type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
+      name: 'intern',
+      message: 'Name of the intern',
     },
+
     {
       type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
+      name: 'internId',
+      message: 'ID of the intern',
     },
+
+    {
+      type: 'input',
+      name: 'emailI',
+      message: 'email of the intern',
+    },
+
+
+   
+
+    {
+      type: 'input',
+      name: 'githubI',
+      message: 'Intern GitHub profile name',
+    },
+    
   ])
   .then((answers) => {
     const htmlPageContent = generateHTML(answers);
