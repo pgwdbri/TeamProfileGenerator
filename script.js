@@ -28,11 +28,12 @@ const generateHTML = (answers) =>
         <div class = "card employee-card">
 
   <div class = "card-header">
-    <h2 class= "card-title"> Name:${answers.name} </h2>
+    <h2 class= "card-title"> Name: ${answers.name} </h2>
   </div>
 
   <div class = "card-body">
     <ul class = "list-group">
+    li class = "list-group-item"> Role: Manager </li>
       <li class = "list-group-item"> ID: ${answers.id} </li>
       <li class = "list-group-item"> Email: ${answers.email} </li>
       <li class = "list-group-item"> Office Number: ${answers.office} </li>
@@ -40,11 +41,12 @@ const generateHTML = (answers) =>
   </div>
 
   <div class = "card-header">
-    <h2 class= "card-title"> Name:${answers.intern} </h2>
+    <h2 class= "card-title"> Name: ${answers.intern} </h2>
   </div>
 
   <div class = "card-body">
     <ul class = "list-group">
+      <li class = "list-group-item"> Role: ${answers.addMemberType} </li>
       <li class = "list-group-item"> ID: ${answers.internId} </li>
       <li class = "list-group-item"> Email: ${answers.emailI} </li>
       <li class="list-group-item">GitHub: ${answers.githubI}</li>
