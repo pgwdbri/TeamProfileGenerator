@@ -1,5 +1,5 @@
 {
-  "name": "mini-project",
+  "name": "teamprofilegenerator",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^6.3.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgwdbri/TeamProfileGenerator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pgwdbri/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/pgwdbri/TeamProfileGenerator#readme"
 }
