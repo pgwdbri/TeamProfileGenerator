@@ -88,7 +88,7 @@ function addMember() {
             employees.push(newMember);
             addHtml(newMember)
             .then(function() {
-                if (moreMembers === "yes") {
+                if (moreMembers === "Yes") {
                     addMember();
                 } else {
                     finishHtml();
@@ -184,7 +184,7 @@ function addHtml(member) {
           </div>`
       }
 
-      
+      console.log("add")
       fs.appendFile('index.html', data, function (err) {
           if (err) {
               return reject(err);
@@ -195,9 +195,9 @@ function addHtml(member) {
 }
 
 function finishHtml() {
-  const html = ` 
+  const html = ` </div>
   </div>
-  </div>
+
   </body>
   </html>`;
 
@@ -206,6 +206,7 @@ function finishHtml() {
           console.log(err);
       };
   });
+  console.log("done")
 }
 
 initApp();
